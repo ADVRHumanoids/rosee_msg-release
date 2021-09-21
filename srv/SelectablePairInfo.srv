@@ -1,0 +1,8 @@
+## Info service to pass info to gui
+## E.G, for pinch we have two finger to select, but in future we can have others kind
+## of element that make a pair and are used to send some particular action
+
+string action_name #the name of the action of which we want infos
+string element_name #the name of the selectable item to look for "companions"
+---
+string[] pair_elements #all the selectable items that make a pair with this

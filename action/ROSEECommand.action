@@ -1,0 +1,10 @@
+#goal definition
+ROSEEActionControl goal_action
+---
+#result definition
+ROSEEActionControl completed_action
+---
+#feedback (how much the action is completed)
+float64 completation_percentage
+string action_name_current #the name of the action that is being done... it is useful only for
+                            #timed that has different action inside

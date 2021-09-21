@@ -1,0 +1,43 @@
+# With this service info about a bunch primitive is shared (name, keys, motor position and so on)
+# Specifing the request, only a subset (even one) of primitives can be given
+# All the request field are optional (if no request at all, alla actions are given), more than one field
+# can be combined (eg I want a action_name=Trig done with finger index (elements_involved = finger)
+
+# NOTE Message fields should be lowercase with underscore separation. e.g. range_min
+
+
+# action type, that is an enum and with msg we can only define it like this
+# remember to add here if we add new type in Action.h and ActionPrimitive.h
+# if some caller is asking for only a type, otherwise 0 is the default then all action are sent
+
+uint8 PRIMITIVE = 0
+uint8 GENERIC_and_COMPOSED = 1 
+uint8 TIMED = 2
+
+uint8 action_type
+
+# subtype for primitive, no meaning if action_type is not primitive
+uint8 PRIMITIVE_ALL = 0
+uint8 PRIMITIVE_PINCHSTRONG = 1
+uint8 PRIMITIVE_PINCHWEAK = 2
+uint8 PRIMITIVE_MULTIPLEPINCHSTRONG = 3
+uint8 PRIMITIVE_TRIG = 4
+uint8 PRIMITIVE_TIPFLEX = 5
+uint8 PRIMITIVE_FINGFLEX = 6
+uint8 PRIMITIVE_SINGLEJOINTMULTIPLETIPS = 7
+uint8 PRIMITIVE_NONE = 8
+
+uint8 primitive_type
+
+# this field can be used to take only an action by name. (action_type field = 0 is then overriden, but error is given if we are
+# asking for a specific type (action_type != 0) but the name refer to an action of another type)
+string action_name
+
+# this field can be used to take only a primitive done with this element 
+# (so useless field if action_name is empty or action is not a primitive)
+# a vector that can also contain only a element
+string[] elements_involved
+---
+GraspingAction[] grasping_actions
+
+

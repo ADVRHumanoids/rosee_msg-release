@@ -1,0 +1,17 @@
+## Service associated with GenericGraspingAction message
+
+NewGenericGraspingAction newAction
+
+# user can also request to store the action in a yaml file, togheter with the others
+bool emitYaml
+
+---
+
+# the service will give true if action is good and it is inserted in the structure
+bool accepted
+
+# true false depending if emission on yaml file is successful
+bool emitted
+
+# string containing useful info about a possible not acceptance
+string error_msg

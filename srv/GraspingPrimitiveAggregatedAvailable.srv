@@ -1,0 +1,24 @@
+## Info service to pass info to gui (only used by gui for now)
+
+# subtype for primitive, no meaning if action_type is not primitive
+uint8 PRIMITIVE_ALL = 0
+uint8 PRIMITIVE_PINCHSTRONG = 1
+uint8 PRIMITIVE_PINCHWEAK = 2
+uint8 PRIMITIVE_MULTIPLEPINCHSTRONG = 3
+uint8 PRIMITIVE_TRIG = 4
+uint8 PRIMITIVE_TIPFLEX = 5
+uint8 PRIMITIVE_FINGFLEX = 6
+uint8 PRIMITIVE_SINGLEJOINTMULTIPLETIPS = 7
+uint8 PRIMITIVE_NONE = 8
+
+uint8 primitive_type
+
+# this field can be used to take only an action by name. If both primitive_type and action_name are 
+# used, the action_name is not considered
+string action_name
+
+# this field can be used to take only a primitive done with this element (or these elements)
+# a vector that can also contain only a element
+string[] elements_involved
+---
+GraspingPrimitiveAggregated[] primitives_aggregated
