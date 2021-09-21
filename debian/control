@@ -1,0 +1,12 @@
+Source: ros-melodic-rosee-msg
+Section: misc
+Priority: optional
+Maintainer: Luca Muratore <luca.muratore@iit.it>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-actionlib-msgs, ros-melodic-catkin, ros-melodic-geometry-msgs, ros-melodic-message-generation, ros-melodic-std-msgs, ros-melodic-std-srvs
+Homepage: https://advrhumanoids.github.io/ROSEndEffector/
+Standards-Version: 3.9.2
+
+Package: ros-melodic-rosee-msg
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-actionlib-msgs, ros-melodic-message-generation, ros-melodic-message-runtime
+Description: The rosee_msg package
