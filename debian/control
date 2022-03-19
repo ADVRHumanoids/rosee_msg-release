@@ -1,0 +1,12 @@
+Source: ros-noetic-rosee-msg
+Section: misc
+Priority: optional
+Maintainer: Luca Muratore <luca.muratore@iit.it>
+Build-Depends: debhelper (>= 9.0.0), ros-noetic-actionlib-msgs, ros-noetic-catkin, ros-noetic-geometry-msgs, ros-noetic-message-generation, ros-noetic-roscpp, ros-noetic-rospy, ros-noetic-std-msgs, ros-noetic-std-srvs
+Homepage: https://advrhumanoids.github.io/ROSEndEffectorDocs/
+Standards-Version: 3.9.2
+
+Package: ros-noetic-rosee-msg
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-noetic-actionlib-msgs, ros-noetic-message-generation, ros-noetic-message-runtime, ros-noetic-roscpp, ros-noetic-rospy
+Description: The rosee_msg package
