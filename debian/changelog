@@ -1,0 +1,14 @@
+ros-noetic-rosee-msg (1.0.2-2focal) focal; urgency=high
+
+  * roscpp and rospy dependencies && authors and urls in package
+  * Contributors: Davide Torielli
+
+ -- Luca Muratore <luca.muratore@iit.it>  Sun, 03 Oct 2021 22:00:00 -0000
+
+ros-noetic-rosee-msg (1.0.1-2focal) focal; urgency=high
+
+
+
+ -- Luca Muratore <luca.muratore@iit.it>  Mon, 20 Sep 2021 22:00:00 -0000
+
+
